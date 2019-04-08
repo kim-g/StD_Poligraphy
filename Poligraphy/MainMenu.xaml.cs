@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,27 @@ namespace Poligraphy
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<string> Plays;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            //Поиск папок-шаблонов
+            Plays = new List<string>();
+            DirectoryInfo dir = new DirectoryInfo(@"Templates");
+            foreach (var item in dir.GetDirectories())
+            {
+                Plays.Add(item.Name);
+
+                Button B = new Button()
+                {
+                    Content = item.Name,
+                    Margin = new Thickness(0,0,0,10),
+                    FontSize = 14
+                };
+                CorePanel.Children.Add(B);
+            }
         }
     }
 }

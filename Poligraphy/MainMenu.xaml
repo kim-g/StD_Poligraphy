@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Poligraphy"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Полиграфия" Height="268" Width="338.785" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="Height">
+    <Grid Margin="10">
+        <StackPanel x:Name="CorePanel" Orientation="Vertical">
+            <Label Content="Спектакль:" Margin="0,0,0,20" FontSize="24"/>
+        </StackPanel>
     </Grid>
 </Window>
